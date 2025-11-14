@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splide.js Center Focus Slider</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+/>
+<!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .splide {
+        width: 80%;
+        margin: 4rem auto;
+        }
+
+        .splide__slide {
+        height: 300px;
+        border: 2px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        background: #fff;
+        transition: all .1s linear;
+        }
+
+        /* Active (center) slide */
+        .splide__slide.is-active {
+            transform: scale(1);
+            opacity: 1;
+            z-index: 2;
+        }
+
+        /* Previous and next slides (side ones) */
+        .splide__slide.is-prev{
+            transform: scale(0.9) translateX(20%);
+            opacity: 0.8;
+            z-index: 1;
+        }
+        .splide__slide.is-next {
+            transform: scale(0.9) translateX(-20%);
+            opacity: 0.8;
+            z-index: 1;
+        }
+        .splide__slide[data-position="9"]{
+            transform: scale(0.8) translateX(60%);
+            opacity: 0.6;
+            z-index: 0;
+        }
+        .splide__slide[data-position="13"]{
+            transform: scale(0.8) translateX(-60%);
+            opacity: 0.6;
+            z-index: 0;
+        }
+
+        /* Adjust spacing */
+        .splide__track {
+        overflow: visible; /* So the side slides show outside */
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="image-slider" class="splide" aria-label="Custom Shaped Slider">
+  <div class="splide__track overflow-hidden">
+    <ul class="splide__list">
+      <li class="splide__slide">1</li>
+      <li class="splide__slide">2</li>
+      <li class="splide__slide">3</li>
+      <li class="splide__slide">4</li>
+      <li class="splide__slide">5</li>
+    </ul>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const splide = new Splide('#image-slider', {
+                type: 'loop',
+                perPage: 5,
+                focus: 'center',
+                pagination: false,
+                arrows: true,
+                trimSpace: false,
+            });
+
+            const slides = document.querySelectorAll('#image-slider .splide__slide');
+
+            // Assign static slide numbers for reference
+            slides.forEach((slide, i) => slide.dataset.slide = i + 1);
+
+            splide.mount();
+
+            const updatePositions = () => {
+                const ordered = splide.Components.Slides.get();
+                const total = ordered.length;
+
+                ordered.forEach((SlideObj, i) => {
+                const el = SlideObj.slide;
+                const position = ((i - splide.index + total) % total) + 1;
+                el.dataset.position = position;
+                });
+            };
+
+            // Initial setup
+            updatePositions();
+
+            // Update after every move
+            splide.on('move', () => {
+                updatePositions();
+            });
+        });
+    </script>
+</body>
+</html>

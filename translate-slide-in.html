@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" class="max-sm:text-sm">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash Analytics Components</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+</head>
+<body class="bg-[#EAECF0] font-sans p-0 m-0 box-border [&.dark]:bg-[#222526]">
+    <!-- container -->
+    <div class="flex flex-col gap-4 p-4 w-screen h-screen overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] bg-[#EAECF0B2] backdrop-blur-[50px] md:py-8 md:w-[30rem] md:shadow-[4px_0px_10px_0px_#00000014] dark:bg-[#222526b3]">
+        <!-- nav -->
+        <div class="flex justify-between items-center gap-2">
+            <!-- nav-left -->
+            <div class="flex items-center gap-2">
+                <img src="https://i.ibb.co.com/WN6WYN4r/arrow-left-large.webp" alt="arrow-left" class="w-6 h-6 cursor-pointer md:hidden">
+
+                <img src="https://i.ibb.co.com/Rk8nvRBf/globe.webp" alt="globe">
+
+                <span class="text-sm font-semibold text-[#344054] dark:text-[#bdb8af]">Translate</span>
+            </div>
+
+            <!-- nav-right -->
+            <button class="w-10 h-10 hidden justify-center items-center bg-transparent border-none outline-none cursor-pointer md:flex">
+                <img src="https://i.ibb.co.com/qYr3Rf9Q/close.webp" alt="close">
+            </button>
+        </div>
+
+        <!-- dropdown-container -->
+        <div class="flex flex-col gap-2">
+            <!-- translate-this-page -->
+            <div class="flex flex-col justify-between items-center gap-2 w-full border-b border-[#98A2B3] border-[#494f52] pb-2 md:flex-row">
+                <!-- title-section -->
+                <div class="flex items-center gap-2 w-full md:auto">
+                    <img src="https://i.ibb.co.com/3Y7Vn2Rp/Files.webp" alt="Files" class="w-6 h-6">
+
+                    <span class="text-sm text-[#0C111D]  dark:text-[#dbd8d3] whitespace-nowrap align-text-top">Translate This Page</span>
+                </div>
+
+                <!-- dropdown-section -->
+                <div class="w-full md:w-[12.5rem] md:min-w-[12.5rem]">
+                    <!-- input-field -->
+                    <div class="cursor-pointer">
+                        <!-- input -->
+                        <div class="flex items-center gap-1 bg-white/50 dark:bg-[#181a1b80] border-b border-[#D0D5DD] dark:border-[#3b4043] shadow-[0px_1px_2px_0px_#1018280D]">
+                            <!-- content -->
+                            <div class="pl-3 py-2 flex-grow">
+                                <span class="text-sm text-[#0C111D]  dark:text-[#dbd8d3] whitespace-nowrap align-text-top">English (US)</span>
+                            </div>
+
+                            <!-- arrow -->
+                            <div class="pr-3 py-2">
+                                <img src="https://i.ibb.co.com/pBRsJJ4z/chevron-down.webp" alt="expand" class="w-5 h-5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- dropdown-group -->
+            <div class="flex flex-col gap-4">
+                <!-- default-language -->
+                <div class="flex flex-col justify-between items-center gap-2 w-full h-[4.25rem] md:h-10 md:flex-row">
+                    <!-- title-section -->
+                    <div class="flex items-center gap-2 w-full md:w-auto">
+                        <img src="https://i.ibb.co.com/5Xmtqjh6/settings.webp" alt="settings" class="w-6 h-6">
+
+                        <span class="text-sm font-semibold text-[#101828] dark:text-[#d6d3cd]">Default Language</span>
+                    </div>
+
+                    <!-- dropdown-section -->
+                    <div class="w-full md:w-[12.5rem]">
+                        <!-- input-field -->
+                        <div class="cursor-pointer">
+                            <!-- input -->
+                            <div class="flex items-center gap-1 bg-white/50 dark:bg-[#181a1b80] border-b border-[#D0D5DD] dark:border-[#3b4043] shadow-[0px_1px_2px_0px_#1018280D]">
+                                <!-- content -->
+                                <div class="pl-3 py-2 flex-grow">
+                                    <span class="text-sm text-[#0C111D]  dark:text-[#dbd8d3] whitespace-nowrap align-text-top">English (US)</span>
+                                </div>
+
+                                <!-- arrow -->
+                                <div class="pr-3 py-2">
+                                    <img src="https://i.ibb.co.com/pBRsJJ4z/chevron-down.webp" alt="expand" class="w-5 h-5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email & Notification -->
+                <div class="flex flex-col justify-between items-center gap-2 w-full h-[4.25rem] md:h-10 md:flex-row">
+                    <!-- title-section -->
+                    <div class="flex items-center gap-2 w-full md:w-auto">
+                        <img src="https://i.ibb.co.com/BX32hJQ/Alerts-feedback.webp" alt="alert" class="w-6 h-6">
+
+                        <span class="text-sm text-[#101828] dark:text-[#d6d3cd]">Email & Notification</span>
+                        
+                        <img src="https://i.ibb.co.com/zTtvGXH6/Help-icon.webp" alt="Help-icon" class="w-4 h-4 cursor-pointer">
+                    </div>
+
+                    <!-- dropdown-section -->
+                    <div class="w-full md:w-[12.5rem]">
+                        <!-- input-field -->
+                        <div class="cursor-pointer">
+                            <!-- input -->
+                            <div class="flex items-center gap-1 bg-white/50 dark:bg-[#181a1b80] border-b border-[#D0D5DD] dark:border-[#3b4043] shadow-[0px_1px_2px_0px_#1018280D]">
+                                <!-- content -->
+                                <div class="pl-3 py-2 flex-grow">
+                                    <span class="text-sm text-[#0C111D]  dark:text-[#dbd8d3] whitespace-nowrap align-text-top">Use Default Language</span>
+                                </div>
+
+                                <!-- arrow -->
+                                <div class="pr-3 py-2">
+                                    <img src="https://i.ibb.co.com/pBRsJJ4z/chevron-down.webp" alt="expand" class="w-5 h-5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Messaging -->
+                <div class="flex flex-col justify-between items-center gap-2 w-full h-[4.25rem] md:h-10 md:flex-row">
+                    <!-- title-section -->
+                    <div class="flex items-center gap-2 w-full md:w-auto">
+                        <img src="https://i.ibb.co.com/nssjm4yK/message.webp" alt="message" class="w-6 h-6">
+
+                        <span class="text-sm text-[#101828] dark:text-[#d6d3cd]">Messaging</span>
+                        
+                        <img src="https://i.ibb.co.com/zTtvGXH6/Help-icon.webp" alt="Help-icon" class="w-4 h-4 cursor-pointer">
+                    </div>
+
+                    <!-- dropdown-section -->
+                    <div class="w-full md:w-[12.5rem]">
+                        <!-- input-field -->
+                        <div class="cursor-pointer">
+                            <!-- input -->
+                            <div class="flex items-center gap-1 bg-white/50 dark:bg-[#181a1b80] border-b border-[#D0D5DD] dark:border-[#3b4043] shadow-[0px_1px_2px_0px_#1018280D]">
+                                <!-- content -->
+                                <div class="pl-3 py-2 flex-grow">
+                                    <span class="text-sm text-[#0C111D]  dark:text-[#dbd8d3] whitespace-nowrap align-text-top">Use Default Language</span>
+                                </div>
+
+                                <!-- arrow -->
+                                <div class="pr-3 py-2">
+                                    <img src="https://i.ibb.co.com/pBRsJJ4z/chevron-down.webp" alt="expand" class="w-5 h-5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call -->
+                <div class="flex flex-col justify-between items-center gap-2 w-full h-[4.25rem] md:h-10 md:flex-row">
+                    <!-- title-section -->
+                    <div class="flex items-center gap-2 w-full md:w-auto">
+                        <img src="https://i.ibb.co.com/VYJP3tVM/call.webp" alt="call" class="w-6 h-6">
+
+                        <span class="text-sm text-[#101828] dark:text-[#d6d3cd]">Call</span>
+                        
+                        <img src="https://i.ibb.co.com/zTtvGXH6/Help-icon.webp" alt="Help-icon" class="w-4 h-4 cursor-pointer">
+                    </div>
+
+                    <!-- dropdown-section -->
+                    <div class="w-full md:w-[12.5rem]">
+                        <!-- input-field -->
+                        <div class="cursor-pointer">
+                            <!-- input -->
+                            <div class="flex items-center gap-1 bg-white/50 dark:bg-[#181a1b80] border-b border-[#D0D5DD] dark:border-[#3b4043] shadow-[0px_1px_2px_0px_#1018280D]">
+                                <!-- content -->
+                                <div class="pl-3 py-2 flex-grow">
+                                    <span class="text-sm text-[#0C111D]  dark:text-[#dbd8d3] whitespace-nowrap align-text-top">Use Default Language</span>
+                                </div>
+
+                                <!-- arrow -->
+                                <div class="pr-3 py-2">
+                                    <img src="https://i.ibb.co.com/pBRsJJ4z/chevron-down.webp" alt="expand" class="w-5 h-5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Stream -->
+                <div class="flex flex-col justify-between items-center gap-2 w-full h-[4.25rem] md:h-10 md:flex-row">
+                    <!-- title-section -->
+                    <div class="flex items-center gap-2 w-full md:w-auto">
+                        <img src="https://i.ibb.co.com/d09w8bKx/Media-devices.webp" alt="camera" class="w-6 h-6">
+
+                        <span class="text-sm text-[#101828] dark:text-[#d6d3cd]">Live Stream</span>
+                        
+                        <img src="https://i.ibb.co.com/zTtvGXH6/Help-icon.webp" alt="Help-icon" class="w-4 h-4 cursor-pointer">
+                    </div>
+
+                    <!-- dropdown-section -->
+                    <div class="w-full md:w-[12.5rem]">
+                        <!-- input-field -->
+                        <div class="cursor-pointer">
+                            <!-- input -->
+                            <div class="flex items-center gap-1 bg-white/50 dark:bg-[#181a1b80] border-b border-[#D0D5DD] dark:border-[#3b4043] shadow-[0px_1px_2px_0px_#1018280D]">
+                                <!-- content -->
+                                <div class="pl-3 py-2 flex-grow">
+                                    <span class="text-sm text-[#0C111D]  dark:text-[#dbd8d3] whitespace-nowrap align-text-top">Use Default Language</span>
+                                </div>
+
+                                <!-- arrow -->
+                                <div class="pr-3 py-2">
+                                    <img src="https://i.ibb.co.com/pBRsJJ4z/chevron-down.webp" alt="expand" class="w-5 h-5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
