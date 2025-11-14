@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="max-sm:text-sm">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In call function</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+          theme: {
+              extend: {
+                  screens: {
+                      sm: '480px',
+                      md: '768px',
+                      lg: '1010px',
+                      xl: '1365px',
+                  },
+                  fontFamily: {
+                      sans: ['Poppins', 'Inter', 'Montserrat', 'Open Sans', 'arial', 'sans-serif'],
+                  },
+              },
+          },
+      }
+    </script>
+</head>
+<body class="bg-black/25 font-sans p-0 m-0 box-border overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] [&.dark]:bg-[#202324]">
+    <!-- template-wrapper -->
+    <div class="w-screen h-screen relative [background-image:url('https://i.ibb.co.com/WWsvMx1X/in-call-bg.webp')] bg-cover bg-center bg-no-repeat">
+        <!-- dropdown-menu-wrapper -->
+        <div class="fixed bottom-0 right-0 w-full flex flex-col bg-black/25 shadow-[0px_0px_8px_0px_#00000040] backdrop-blur-[25px] rounded-t-[0.625rem] overflow-y-scroll [scrollbar-width:none] [-ms-overflow-style:none] [ &::-webkit-scrollbar]:hidden sm:w-[15.9375rem] sm:h-screen sm:rounded-t-none sm:bg-black md:w-full md:h-auto md:rounded-t-[0.625rem] md:bg-black/25 lg:absolute lg:bottom-[5.875rem] lg:right-2 lg:w-[18.375rem] lg:rounded-[0.625rem]">
+            <!-- menu-item -->
+            <div class="h-14 flex items-center gap-2.5 px-4 py-3 filter [filter:drop-shadow(0_4px_12px_#00000080)_drop-shadow(0_0_4px_#00000040)] cursor-pointer xl:hidden">
+                <img src="https://i.ibb.co.com/35bLp52V/maximize-02.webp" alt="maximize-02" class="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6">
+                <span class="text-base font-medium text-white whitespace-nowrap sm:text-sm md:text-base">Fullscreen</span>
+            </div>
+
+            <!-- menu-item -->
+            <div class="h-14 flex items-center gap-2.5 px-4 py-3 filter [filter:drop-shadow(0_4px_12px_#00000080)_drop-shadow(0_0_4px_#00000040)] cursor-pointer xl:order-5">
+                <img src="https://i.ibb.co.com/3KH2dh6/arrow-square-down-right.webp" alt="arrow-square-down-right" class="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6">
+                <span class="text-base font-medium text-white whitespace-nowrap sm:text-sm md:text-base">Open picture -in-picture</span>
+            </div>
+
+            <!-- menu-item -->
+            <div class="h-14 flex items-center gap-2.5 px-4 py-3 filter [filter:drop-shadow(0_4px_12px_#00000080)_drop-shadow(0_0_4px_#00000040)] cursor-pointer xl:hidden">
+                <img src="https://i.ibb.co.com/0ppHs2mn/image-user-plus.webp" alt="image-user-plus" class="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6">
+                <span class="text-base font-medium text-white whitespace-nowrap sm:text-sm md:text-base">Background and effects</span>
+            </div>
+
+            <!-- menu-item -->
+            <div class="h-14 flex items-center gap-2.5 px-4 py-3 filter [filter:drop-shadow(0_4px_12px_#00000080)_drop-shadow(0_0_4px_#00000040)] cursor-pointer border-t border-white/25 xl:order-4">
+                <img src="https://i.ibb.co.com/yFDzqd1j/clock-plus.webp" alt="clock-plus" class="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6">
+                <span class="text-base font-medium text-white whitespace-nowrap sm:text-sm md:text-base">Extend session</span>
+            </div>
+
+            <!-- menu-item -->
+            <div class="h-14 flex items-center gap-2.5 px-4 py-3 filter [filter:drop-shadow(0_4px_12px_#00000080)_drop-shadow(0_0_4px_#00000040)] cursor-pointer xl:order-3">
+                <img src="https://i.ibb.co.com/Q3Kr1BqQ/calendar-minus-02.webp" alt="calendar-minus-02" class="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6 xl:[filter:brightness(0)_saturate(100%)_invert(54%)_sepia(95%)_saturate(5752%)_hue-rotate(357deg)_brightness(99%)_contrast(103%)]">
+                <span class="text-base font-medium text-[#FCE40D] whitespace-nowrap sm:text-sm md:text-base xl:text-[#FF4405]">End session</span>
+            </div>
+
+            <!-- menu-item -->
+            <div class="h-14 flex items-center gap-2.5 px-4 py-3 filter [filter:drop-shadow(0_4px_12px_#00000080)_drop-shadow(0_0_4px_#00000040)] cursor-pointer xl:hidden">
+                <img src="https://i.ibb.co.com/0ppHs2mn/image-user-plus.webp" alt="image-user-plus" class="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6">
+                <span class="text-base font-medium text-white whitespace-nowrap sm:text-sm md:text-base">Options</span>
+            </div>
+
+            <!-- menu-item -->
+            <div class="h-14 hidden items-center gap-2.5 px-4 py-3 filter [filter:drop-shadow(0_4px_12px_#00000080)_drop-shadow(0_0_4px_#00000040)] cursor-pointer border-t border-white/25 sm:flex lg:hidden">
+                <img src="https://i.ibb.co.com/bjVh4Tmg/message-dots-circle.webp" alt="message-dots-circle" class="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6">
+                <span class="text-base font-medium text-white whitespace-nowrap sm:text-sm md:text-base">Chat panel</span>
+            </div>
+
+            <!-- menu-item -->
+            <div class="h-14 flex items-center gap-2.5 px-4 py-3 filter [filter:drop-shadow(0_4px_12px_#00000080)_drop-shadow(0_0_4px_#00000040)] cursor-pointer lg:hidden">
+                <img src="https://i.ibb.co.com/XZ5YVHCS/users-03.webp" alt="users-03" class="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6">
+                <span class="text-base font-medium text-white whitespace-nowrap sm:text-sm md:text-base">Participants</span>
+            </div>
+
+            <!-- menu-item -->
+            <div class="h-14 flex items-center gap-2.5 px-4 py-3 filter [filter:drop-shadow(0_4px_12px_#00000080)_drop-shadow(0_0_4px_#00000040)] cursor-pointer border-t border-white/25 xl:order-1 xl:border-t-0">
+                <img src="https://i.ibb.co.com/wrP0v1Jy/annotation-alert.webp" alt="annotation-alert" class="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6">
+                <span class="text-base font-medium text-white whitespace-nowrap sm:text-sm md:text-base">Report</span>
+            </div>
+
+            <!-- menu-item -->
+            <div class="h-14 flex items-center gap-2.5 px-4 py-3 filter [filter:drop-shadow(0_4px_12px_#00000080)_drop-shadow(0_0_4px_#00000040)] cursor-pointer xl:order-2">
+                <img src="https://i.ibb.co.com/rRjCVmmY/help-circle.webp" alt="help-circle"  class="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6">
+                <span class="text-base font-medium text-white whitespace-nowrap sm:text-sm md:text-base">Help</span>
+            </div>
+
+            <!-- menu-item -->
+            <div class="h-14 flex items-center gap-2.5 px-4 py-3 filter [filter:drop-shadow(0_4px_12px_#00000080)_drop-shadow(0_0_4px_#00000040)] cursor-pointer xl:hidden">
+                <img src="https://i.ibb.co.com/QjNmQ4Zv/settings-02.webp" alt="settings-02" class="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6">
+                <span class="text-base font-medium text-white whitespace-nowrap sm:text-sm md:text-base">Settings</span>
+            </div>
+
+            <!-- menu-item -->
+            <div class="h-14 hidden items-center gap-2.5 px-4 py-3 filter [filter:drop-shadow(0_4px_12px_#00000080)_drop-shadow(0_0_4px_#00000040)] cursor-pointer xl:flex xl:order-6">
+                <img src="https://i.ibb.co.com/0ppHs2mn/image-user-plus.webp" alt="image-user-plus" class="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6">
+                <span class="text-base font-medium text-white whitespace-nowrap sm:text-sm md:text-base">Call Settings</span>
+            </div>
+        </div>
+    </div>
+</body>
